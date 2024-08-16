@@ -1,15 +1,9 @@
-export function render() {
-  const html = `
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>TrackMyBus</title>
-    <link rel="icon" type="image/x-icon" href="/models/logo.png">
-    <link href="index.css" rel="stylesheet">
-</head>
-<body>
-    <div id="main">
+import './style.css'
+import javascriptLogo from './javascript.svg'
+import viteLogo from '/vite.svg'
+
+document.querySelector('#app').innerHTML = `
+   <div id="main">
         <a href="https://github.com/abin-karukappallil"><img src="../public/github-mark.svg" style="
             position: absolute;
             left: 21px;
@@ -25,7 +19,7 @@ export function render() {
     <div class="form">
         <form id="infoss">
             <label for="Number">Enter vehicle number</label>
-            <input id="Number" name="Number" type="text">
+            <input value="KL35F9511" id="Number" name="Number" type="text">
             <button id="submit" type="submit">submit</button>
         </form>
     </div>
@@ -41,12 +35,5 @@ export function render() {
     </div>
    
     </div>
-    <div id="3D"></div>
-
-    <script type="module" src="/main.js"></script>
-    <script type="module" src="/api.js"></script>
-</body>
-</html>
-  `
-  return { html }
-}
+    <div class="threeD" id="3D"></div>
+`

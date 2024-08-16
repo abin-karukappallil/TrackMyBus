@@ -4,20 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node server",
-    "build": "npm run build:client && npm run build:server",
-    "build:client": "vite build --ssrManifest --outDir dist/client",
-    "build:server": "vite build --ssr src/app.js --outDir dist/server",
-    "preview": "cross-env NODE_ENV=production node server"
-  },
-  "dependencies": {
-    "compression": "^1.7.4",
-    "express": "^4.19.2",
-    "sirv": "^2.0.4",
-    "three": "^0.167.1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "vite": "^5.2.10"
+    "vite": "^5.4.1"
+  },
+  "dependencies": {
+    "three": "^0.167.1"
   }
 }

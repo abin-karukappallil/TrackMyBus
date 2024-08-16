@@ -1,3 +1,4 @@
+
 :root {
   --transparent: oklch(0 0 0 / 0%);
   --purple-100: oklch(0.86 0.08 280);
@@ -41,7 +42,7 @@ body {
   0 0 1em rgb(28, 28, 39),
   0 0 0.2em rgb(47, 47, 54);
 }
-#3D {
+.threeD {
   position: absolute;
   top: 0;
   left: 0;
