@@ -110,7 +110,6 @@ max-height: 80vh;
 margin-bottom: 40px;
 }
 
-/* Individual Bus Time Section */
 .busTime {
 margin-bottom: 30px;
 padding: 20px;
@@ -119,7 +118,6 @@ border-radius: 8px;
 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Heading and Bus Info */
 .busTime h2 {
 font-size: 1.8rem;
 color: #A5B4FC;
