@@ -224,5 +224,5 @@ button:after {
 
 button:hover::after,
 button:focus::after {
-  opacity: 0.6;
+  opacity: 1;
 }

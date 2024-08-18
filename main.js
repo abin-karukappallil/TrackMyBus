@@ -1,4 +1,3 @@
-import './style.css'
 
 
 document.querySelector('#app').innerHTML = `
@@ -19,7 +18,7 @@ document.querySelector('#app').innerHTML = `
         <form id="infoss">
             <label for="Number">Enter vehicle number</label>
             <input value="KL35F9511" id="Number" name="Number" type="text">
-            <button id="submit" type="submit">submit</button>
+            <button id="submit" type="submit">GO</button>
         </form>
     </div>
 </div>
