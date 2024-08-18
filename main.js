@@ -1,6 +1,5 @@
-//import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
+import './style.css'
+
 
 document.querySelector('#app').innerHTML = `
    <div id="main">

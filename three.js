@@ -25,7 +25,7 @@ let object = null;
 
 const loader = new GLTFLoader();
 loader.load(
-    `../public/scene.gltf`, 
+    `/scene.gltf`, 
     function (gltf) {
         object = gltf.scene; 
         object.traverse((child) => {
