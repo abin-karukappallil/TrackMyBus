@@ -33,6 +33,8 @@ body {
   text-align: center;
   z-index: 1;
   color: white !important;
+  height: 100vh;
+  width: 100vw;
 }
 #heading{
   margin-top: 12%;
@@ -83,13 +85,13 @@ border-radius: 10px;
 }
 div.time:hover::-webkit-scrollbar {
 background: #202634;
+}
 .guthub{
   position: absolute;
   left: 21px;
   top: 23px;
   margin: 2px;
   height: 30px;
-}
 }
 input:hover{
   opacity: 100% !important;

@@ -18,7 +18,7 @@ container.appendChild(renderer.domElement);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true; 
 controls.dampingFactor = 0.05;
-
+controls.enableRotate = false; 
 scene.background = new THREE.Color(0x0D0F14);
 
 let object = null;
@@ -59,8 +59,8 @@ function animate() {
     requestAnimationFrame(animate);
 
     if (object) {
-        object.rotation.y += 0.01;
-        object.rotation.x += 0.01;
+        object.rotation.y += 0.001;
+        object.rotation.x += 0.001;
     }
 
     controls.update();

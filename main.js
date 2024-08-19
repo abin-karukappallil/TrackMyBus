@@ -2,7 +2,7 @@
 
 document.querySelector('#app').innerHTML = `
    <div id="main">
-        <a href="https://github.com/abin-karukappallil"><img class="guthub" src="/github-mark.svg" ></a>
+        <a href="https://github.com/abin-karukappallil"><img class="guthub" style="" src="/github-mark.svg" ></a>
         <div id="heading" class="heading">
             <h1><a href="/">TRACK MY BUS</a></h1>
         </div>
