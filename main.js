@@ -31,7 +31,7 @@ document.querySelector('#app').innerHTML = `
             <h3>Disclaimer: The TrackMyBus app provides time information based on permit details for buses. Please be aware that this information is subject to change and may not always be accurate. We recommend verifying the information through additional sources to ensure its correctness. The app is not responsible for any discrepancies or inaccuracies in the provided times.</h3> 
          </div>
     </div>
-   
+   <footer></footer>
     </div>
     <div class="threeD" id="3D"></div>
 `

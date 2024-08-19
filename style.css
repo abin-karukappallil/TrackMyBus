@@ -97,6 +97,7 @@ margin-top: 10%;
 color: red;
 padding: 10px;
 font-size: 0.5rem;
+opacity: 0.5;
 }
 #time {
 max-width: 900px;
@@ -162,6 +163,9 @@ color: #A3BFFA;
     width: 90%;
     padding: 15px;
 }
+.form{
+  margin-top: 50%;
+}
 .busTime h2 {
     font-size: 1.5rem;
 }
@@ -173,6 +177,9 @@ color: #A3BFFA;
 }
 #heading{
   font-size: 1.2rem;
+}
+button{
+  width: 25%;
 }
 }
 ul {
