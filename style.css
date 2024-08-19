@@ -83,7 +83,13 @@ border-radius: 10px;
 }
 div.time:hover::-webkit-scrollbar {
 background: #202634;
-
+.guthub{
+  position: absolute;
+  left: 21px;
+  top: 23px;
+  margin: 2px;
+  height: 30px;
+}
 }
 input:hover{
   opacity: 100% !important;
@@ -165,6 +171,13 @@ color: #A3BFFA;
 }
 .form{
   margin-top: 50%;
+}
+.guthub{
+  position: absolute;
+  left: 0px;
+  top: 3px;
+  margin: 2px;
+  height: 30px;
 }
 .busTime h2 {
     font-size: 1.5rem;
