@@ -18,12 +18,12 @@ async function fetchData(busNumber) {
         document.getElementById("submain").style.display = "none";
         document.getElementById("heading").style.margin = '10px 0 0 0';
         document.getElementById("time").style.display = "block";
+        document.getElementById("dis").style.display = "none";
 
         displayData(data, busNumber);
     } catch (err) {
         console.log("Error fetching details:", err);
 
-        // Display error message
         const timeData = document.getElementById("time");
         timeData.style.display = "block";
         timeData.innerHTML = ""; 

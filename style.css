@@ -172,8 +172,9 @@ color: #A3BFFA;
 /* Responsive Design */
 @media (max-width: 768px) {
 #time {
-    width: 90%;
-    padding: 15px;
+    width: 84%;
+    padding: 0px;
+    /*height: 40%;*/
 }
 .form{
   margin-top: 50%;
