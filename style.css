@@ -114,12 +114,12 @@ opacity: 0.5;
 #time {
 max-width: 900px;
 margin: 40px auto;
-padding: 20px;
+padding: 4px;
 background: rgba(13, 15, 20, 0.8);
 border-radius: 8px;
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 overflow-y: auto;
-max-height: 80vh;
+max-height: 76vh;
 margin-bottom: 40px;
 }
 
@@ -251,4 +251,8 @@ button:after {
 button:hover::after,
 button:focus::after {
   opacity: 1;
+}
+.errDiv{
+  color: red;
+  font-size: 1.8rem;
 }
