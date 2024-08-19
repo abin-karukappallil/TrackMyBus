@@ -2,12 +2,12 @@
 
 document.querySelector('#app').innerHTML = `
    <div id="main">
-        <a href="https://github.com/abin-karukappallil"><img src="../public/github-mark.svg" style="
+        <a href="https://github.com/abin-karukappallil"><img src="/github-mark.svg" style="
             position: absolute;
             left: 21px;
             top: 23px;
             margin: 2px;
-            height: 50px;
+            height: 30px;
         "></a>
         <div id="heading" class="heading">
             <h1><a href="/">TRACK MY BUS</a></h1>
@@ -17,7 +17,7 @@ document.querySelector('#app').innerHTML = `
     <div class="form">
         <form id="infoss">
             <label for="Number">Enter vehicle number</label>
-            <input value="KL35F9511" id="Number" name="Number" type="text">
+            <input value="KL38F4711" id="Number" name="Number" type="text">
             <button id="submit" type="submit">GO</button>
         </form>
     </div>
