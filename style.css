@@ -141,6 +141,9 @@ footer {
 
 footer a {
   text-decoration: none;
+  display: flex;
+  align-content: center;
+  align-items: center;
   color: inherit;
 }
 
