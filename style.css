@@ -183,7 +183,7 @@ background: #2D3748;
 color: #A3BFFA;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 768px) {
 #time {
     width: 84%;
     padding: 0px;
@@ -198,7 +198,7 @@ color: #A3BFFA;
   margin-top: 50%;
 }
 footer{
-  margin-top: 1%;
+  margin-top: 0%;
   opacity: 0.1;
   display: flex;
   align-items: center;

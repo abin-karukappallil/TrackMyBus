@@ -8,7 +8,7 @@ document.querySelector('#app').innerHTML = `   <div id="main">
     <div id="submain" class="submain">
     <div class="form">
         <form id="infoss">
-            <label for="Number">Enter vehicle number</label>
+            <label for="Number">ENTER BUS NUMBER</label>
             <input value="KL38F4711" id="Number" name="Number" type="text">
             <button id="submit" type="submit">GO</button>
         </form>
