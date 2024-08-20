@@ -40,7 +40,7 @@ body {
   width: 100vw;
 }
 #heading{
-  margin-top: 12%;
+  margin-top: 5%;
   font-size: 2rem;
   text-shadow:
   1px 1px 2px black,
@@ -58,7 +58,7 @@ body {
   width: 100VW;
 }
 form{
-  margin-top: 80px;
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
