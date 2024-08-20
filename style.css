@@ -19,7 +19,7 @@ left: 0;
 }
 body {
   margin: 0;
-  overflow-y: scroll;
+  overflow: hidden;
   padding: 0;
   font-family: Arial, sans-serif;
   font-weight: 600;
@@ -58,7 +58,7 @@ body {
   width: 100VW;
 }
 form{
-  margin-top: 100px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
