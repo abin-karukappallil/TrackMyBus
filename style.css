@@ -198,7 +198,7 @@ footer:hover {
 }
 
 /* Responsive Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #time {
     width: 84%;
     padding: 0;
@@ -313,4 +313,19 @@ button:focus::after {
 .errDiv {
   color: red;
   font-size: 1.8rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  .down{
+    margin-top: 37%;
+  }
+  .form{
+    margin-top: 30%;
+  }
+  .heading h1{
+    font-size: 1.8em;
+  }
+  .down-adjust{
+    margin-top: 7%;
+  }
+  
 }

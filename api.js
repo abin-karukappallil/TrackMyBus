@@ -63,3 +63,20 @@ function displayData(data, busNumber) {
         timeData.appendChild(busDataSection);
     });
 }
+function adjMar(entries) {
+    const downElement = document.querySelector('.down');
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        downElement.classList.add('down-adjust');
+      } else {
+        downElement.classList.remove('down-adjust');
+      }
+    });
+  }
+  
+  const observer = new IntersectionObserver(adjMar, {
+    threshold: 0.5 
+  });
+  
+  const timeElement = document.getElementById('time');
+  observer.observe(timeElement);
