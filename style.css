@@ -341,6 +341,9 @@ button:focus::after {
 .heading{
   margin-top: 7%;
 }
+.down{
+  display: hidden;
+}
 }
 @media only screen and (min-width: 1200px){
   .down{
