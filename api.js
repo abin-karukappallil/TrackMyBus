@@ -71,7 +71,7 @@ function adjMar(entries) {
       } else {
         downElement.classList.remove('down-adjust');
       }
-    });
+    }); 
   }
   
   const observer = new IntersectionObserver(adjMar, {
