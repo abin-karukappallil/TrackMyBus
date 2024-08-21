@@ -198,18 +198,22 @@ footer:hover {
 }
 
 /* Responsive Media Queries */
-@media (max-width: 767px) {
+@media only screen and (min-width:391px) and (max-width: 767px) {
   #time {
     width: 84%;
     padding: 0;
   }
 
   .down {
-    position: relative;
-    bottom: 40px;
+    margin-top: 50%;
     font-size: 1rem;
   }
-
+  .down-adjust{
+    margin-top: 0;
+  }
+  .down footer{
+    opacity: 1;
+  }
   form {
     margin-top: 50%;
   }
@@ -252,10 +256,6 @@ footer:hover {
   }
 }
 
-.down {
-  position: relative;
-  bottom: 0px;
-}
 
 ul {
   list-style-type: none;
@@ -328,4 +328,46 @@ button:focus::after {
     margin-top: 7%;
   }
    
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+ /**/
+ .down {
+  position: relative;
+  bottom: -270px;
+}
+}
+@media only screen and (min-width: 1200px){
+  .down{
+    margin-top: 23%;
+
+  }
+  .down-adjust{
+    margin-top: 0%;
+  }
+}
+@media (max-width: 390px) {
+  .down{
+    margin-top: 52%;
+  }
+  .down footer{
+    opacity: 1;
+    font-weight: 200;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+    font-size: 0.9rem !important;
+  }
+  .down-adjust{
+    margin-top: 0;
+  }
+  .heading h1{
+    font-size: 1.9rem;
+  }
+  .form label {
+    font-size: 1.5rem;
+  }
+  .form input{
+    width: 59%;
+  }
+  .form button{
+    width: 24%;
+  }
 }
