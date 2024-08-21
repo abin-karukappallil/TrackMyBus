@@ -37,7 +37,7 @@ body {
 }
 
 #heading {
-  margin-top: 5%;
+  margin-top: 10%;
   font-size: 2rem;
   text-shadow:
     1px 1px 2px black,
@@ -234,7 +234,9 @@ footer:hover {
     left: 0;
     top: 3px;
   }
-
+  .heading{
+    margin-top: 7%;
+  }
   .busTime h2 {
     font-size: 1.2rem;
   }
@@ -256,7 +258,9 @@ footer:hover {
   }
 }
 
-
+.down{
+  margin-top: 23%;
+}
 ul {
   list-style-type: none;
 }
@@ -332,8 +336,10 @@ button:focus::after {
 @media only screen and (min-width: 992px) and (max-width: 1199px){
  /**/
  .down {
-  position: relative;
-  bottom: -270px;
+ margin-top: 20%;
+}
+.heading{
+  margin-top: 7%;
 }
 }
 @media only screen and (min-width: 1200px){
@@ -344,10 +350,16 @@ button:focus::after {
   .down-adjust{
     margin-top: 0%;
   }
+  .heading{
+    margin-top: 7%;
+  }
 }
 @media (max-width: 390px) {
   .down{
     margin-top: 52%;
+  }
+  .heading{
+    margin-top: 7%;
   }
   .down footer{
     opacity: 1;
