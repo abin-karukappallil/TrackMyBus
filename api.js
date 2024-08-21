@@ -73,7 +73,7 @@ function adjMar(entries) {
       }
     }); 
   }
-  
+   
   const observer = new IntersectionObserver(adjMar, {
     threshold: 0.5 
   });
