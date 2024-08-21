@@ -18,7 +18,7 @@ async function fetchData(busNumber) {
         document.getElementById("submain").style.display = "none";
         document.getElementById("heading").style.margin = '10px 0 0 0';
         document.getElementById("time").style.display = "block";
-        document.getElementById("dis").style.display = "none";
+       // document.getElementById("dis").style.display = "none";
 
         displayData(data, busNumber);
     } catch (err) {
@@ -63,20 +63,20 @@ function displayData(data, busNumber) {
         timeData.appendChild(busDataSection);
     });
 }
-function adjMar(entries) {
-    const downElement = document.querySelector('.down');
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        downElement.classList.add('down-adjust');
-      } else {
-        downElement.classList.remove('down-adjust');
-      }
-    }); 
-  }
+// function adjMar(entries) {
+//     const downElement = document.querySelector('.down');
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         downElement.classList.add('down-adjust');
+//       } else {
+//         downElement.classList.remove('down-adjust');
+//       }
+//     }); 
+//   }
 
-  const observer = new IntersectionObserver(adjMar, {
-    threshold: 0.5 
-  });
+//   const observer = new IntersectionObserver(adjMar, {
+//     threshold: 0.5 
+//   });
   
-  const timeElement = document.getElementById('time');
-  observer.observe(timeElement);
+//   const timeElement = document.getElementById('time');
+//   observer.observe(timeElement);
