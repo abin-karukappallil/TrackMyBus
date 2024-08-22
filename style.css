@@ -369,7 +369,7 @@ button:focus::after {
     font-weight: 200;
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
     font-size: 0.9rem !important;
-  } 
+  }   
   .down-adjust{
     margin-top: 0;
   } 
