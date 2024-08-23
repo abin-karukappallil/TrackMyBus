@@ -200,20 +200,12 @@ footer:hover {
 }
 
 /* Responsive Media Queries */
-@media only screen and (min-width:391px) and (max-width: 767px) {
+@media (max-width: 767px) {
   #time {
     width: 84%;
     padding: 0;
   }
-
-  .down {
-    margin-top: 50%;
-    font-size: 1rem;
-  }
-  .down-adjust{
-    margin-top: 0;
-  }
-  .down footer{
+  footer a{
     opacity: 1;
   }
   form {
