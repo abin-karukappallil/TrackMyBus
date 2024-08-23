@@ -1,5 +1,4 @@
-document.getElementById("time").style.display = "none";
-
+document.getElementById("data").style.display = "none";
 document.getElementById("infoss").addEventListener("submit", (e) => {
     e.preventDefault();
     const busNumber = document.getElementById("Number").value;
@@ -17,6 +16,7 @@ async function fetchData(busNumber) {
 
         document.getElementById("submain").style.display = "none";
         document.getElementById("heading").style.margin = '10px 0 0 0';
+        document.getElementById("data").style.display = "block";
         document.getElementById("time").style.display = "block";
        // document.getElementById("dis").style.display = "none";
        

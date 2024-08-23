@@ -15,7 +15,7 @@ document.querySelector('#app').innerHTML = `
         </form>
     </div>
 </div>
-    <div class="data">
+    <div id="data" class="data">
         <div id="time" class="time">
             
             </div>
