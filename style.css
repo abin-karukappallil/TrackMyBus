@@ -212,22 +212,14 @@ footer:hover {
     margin-top: 50%;
   } */
 
-  footer {
-    /* margin-top: 0%; */
-    opacity: 0.8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   #time {
     height: 70vh;
   }
-
+/* 
   .guthub {
     left: 0;
     top: 3px;
-  }
+  } */
   /* .heading{
     margin-top: 7%;
   } */
