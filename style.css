@@ -40,7 +40,7 @@ body {
 }
 
 #heading {
-  margin-top: 10%;
+  /* margin-top: 10%; */
   font-size: 2rem;
   text-shadow:
     1px 1px 2px black,
@@ -58,7 +58,7 @@ body {
 }
 
 form {
-  margin-top: 8%;
+  /* margin-top: 8%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,19 +122,19 @@ input:hover {
 }
 
 #time {
-  max-width: 900px;
+  max-width: 750px;
   margin: 40px auto;
   padding: 4px;
   background: rgba(13, 15, 20, 0.8);
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
-  max-height: 70vh;
+  max-height: 60vh;
   margin-bottom: 40px;
 }
 
 footer {
-  margin-top: 0%;
+  /* margin-top: 0%; */
   opacity: 0.4;
   display: flex;
   align-items: center;
@@ -208,12 +208,12 @@ footer:hover {
   footer a{
     opacity: 1;
   }
-  form {
+  /* form {
     margin-top: 50%;
-  }
+  } */
 
   footer {
-    margin-top: 0%;
+    /* margin-top: 0%; */
     opacity: 0.8;
     display: flex;
     align-items: center;
@@ -228,9 +228,9 @@ footer:hover {
     left: 0;
     top: 3px;
   }
-  .heading{
+  /* .heading{
     margin-top: 7%;
-  }
+  } */
   .busTime h2 {
     font-size: 1.2rem;
   }
@@ -252,9 +252,6 @@ footer:hover {
   }
 }
 
-.down{
-  margin-top: 23%;
-}
 ul {
   list-style-type: none;
 }
