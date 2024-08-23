@@ -29,6 +29,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  gap: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -313,7 +314,7 @@ button:focus::after {
   }
    
 }
-/* @media only screen and (min-width: 992px) and (max-width: 1199px){
+@media only screen and (min-width: 992px) and (max-width: 1199px){
  .down {
  margin-top: 20%;
 }
@@ -354,4 +355,4 @@ button:focus::after {
   .form button{
     width: 24%;
   }
-} */
+}
