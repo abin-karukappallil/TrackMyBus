@@ -11,8 +11,9 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Image from "next/image";
 import Link from "next/link";
-
+import { IoMdArrowRoundBack } from "react-icons/io";
 const StyledTableContainer = styled(TableContainer)`
+
    min-width: 40vw;
   overflow-x: auto;
   margin-bottom: 1rem;
@@ -74,6 +75,9 @@ const Details = () => {
     }
   }, [router]);
 
+  const changePage = () => {
+    router.push("/");
+  };
   async function fetchData(busNumber: string) {
     setLoading(true);
     try {
@@ -94,8 +98,13 @@ const Details = () => {
 
   return (
     <div className="min-h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+      
       <div className="h-[100vh] gap-4 flex flex-col justify-center items-center max-w-4xl mx-auto p-4">
-      <h1 className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300  text-center font-sans font-bold">
+     <div className="absolute cursor-pointer z-10 sm:left-56 sm:top-10 left-9 top-6">
+     <IoMdArrowRoundBack onClick={changePage} color="white" size="30" />
+  
+     </div>
+     <h1 className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300  text-center font-sans font-bold">
         Track My Bus
       </h1>
         <div className="no-scrollbar mb-32 md:mb-20 overflow-y-scroll z-10 max-h-[80vh] my-9 border-2 border-neutral-500">

@@ -26,7 +26,7 @@ export default function Home() {
         placeholder="KL38F4711"
         className="text-white text-center rounded-sm border border-slate-600 focus:ring-2 focus:ring-teal-500  w-full relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-500 p-2"
       />
-      <button onClick={handleChnage} className="relative z-10 mt-4 min-w-28 min-h-9 bg-neutral-950 border border-slate-600 text-white">GO</button>
+      <button onClick={handleChnage} className="hover:border-white relative z-10 mt-4 min-w-28 min-h-9 bg-neutral-950 border border-slate-600 text-white">GO</button>
       
     </div>
     <Link href="https://dsc.gg/upzare" className="flex flex-row items-center justify-center">
