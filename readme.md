@@ -1,79 +1,36 @@
-# TrackMyBus🚌
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-TrackMyBus is a web application designed to help users track bus schedules and information by entering the vehicle number. It fetches bus details from a live API and displays the data in an interactive and responsive UI.
-## Features
+## Getting Started
 
-- Fetch and display real-time bus data based on vehicle number.
-- Responsive design for seamless use on various devices.
-- Smooth and dynamic user interface.
-
-## Technologies Used 🧑‍💻
-
-- **Vite.js** - Fast front-end build tool and development server.
-- **Vanilla JavaScript** - Core language for the app logic.
-- **Three.js** - Library for rendering the 3D model.
-- **HTML5 & CSS3** - Structuring and styling the application.
-
-## Installation 🛠️
-
-To run this project locally, follow these steps:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/TrackMyBus.git
-2. **Navigate to the project directory:**
-   ```code
-   cd TrackMyBus
-3. **Install the dependencies:**
-    ```bash
-    npm install
-4. **Run the development server**
-   ```bash
-   npm run dev
-
-## Project Structure 📑
-The main components of the project include:
-
-**index.html** - Main HTML file.
-**main.js** - Entry point for the application.
-**api.js** - Handles form submissions and fetching bus data from the API.
-**three.js** - Handles 3D model rendering using Three.js.
-**style.css** - Styles the entire application.
-**public/** - Contains static assets like the 3D model and images.
-
-## Deployment ☁️
-When deploying this application, ensure that the file paths are correctly referenced, especially if you're deploying to a subdirectory. You may need to update the base option in vite.config.js.
-
-To build the project for production:
-```bash
-npm run build
-```
-You can then deploy the contents of the dist/ directory to your hosting service.
-
-## Usage 
-1. Enter the vehicle number in the input field and click Go.
-2. The app fetches data from the API and displays it, including the bus number, trip details, and station schedules.
-
-## API Reference
-
-The app fetches bus data using the following API:
+First, run the development server:
 
 ```bash
-https://busapi.amithv.xyz/api/v1/search?vehicle_number={busNumber}
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
-## Live
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-[TrackMyBus](https://trackmybus.abinthomas.dev)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
---------------------------------
-## Contributing
+## Learn More
 
-Contributions are welcome! Feel free to open a pull request or report issues.
+To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## Deploy on Vercel
 
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
