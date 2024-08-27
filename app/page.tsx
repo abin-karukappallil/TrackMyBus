@@ -1,7 +1,8 @@
 "use client"
 import React, { useState } from "react";
 import { useRouter } from 'next/navigation';
-
+import Image from "next/image";
+import Link from "next/link";
 export default function Home() {
   const [value,setvalue] = useState<string>('');
   const router = useRouter();
@@ -12,8 +13,8 @@ export default function Home() {
   }
   return (
     <div className="h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased overflow-hidden">
-    <div className="flex flex-col justify-center items-center max-w-2xl mx-auto p-4  overflow-hidden">
-      <h1 className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300  text-center font-sans font-bold">
+    <div className="flex flex-col justify-center items-center max-w-2xl mx-auto p-4">
+      <h1 className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent overflow-hidden bg-gradient-to-b from-neutral-100 to-neutral-300  text-center font-sans font-bold">
         Track My Bus
       </h1>
       <p></p>
@@ -25,9 +26,22 @@ export default function Home() {
         placeholder="KL38F4711"
         className="text-white text-center rounded-sm border border-slate-600 focus:ring-2 focus:ring-teal-500  w-full relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-500 p-2"
       />
-      <button onClick={handleChnage} className="relative z-10 mt-2 min-w-28 min-h-9 bg-neutral-950 border border-slate-600 text-white">GO</button>
+      <button onClick={handleChnage} className="relative z-10 mt-4 min-w-28 min-h-9 bg-neutral-950 border border-slate-600 text-white">GO</button>
+      
     </div>
-  
+    <Link href="https://dsc.gg/upzare" className="flex flex-row items-center justify-center">
+      <div className="z-10 text-bold text-sm flex items-center md:opacity-25 text-slate-400 absolute bottom-3 opacity-75 hover:opacity-100 cursor-pointer ">
+  <Image 
+    width={35}
+    height={35}
+    src="/upzare.svg" 
+    alt="Upzare Logo"
+  />
+  <span>Powered By Upzare</span>
+</div>
+</Link>
+
     </div>
+    
   );
 }

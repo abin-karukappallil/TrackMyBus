@@ -9,13 +9,23 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import Image from "next/image";
+import Link from "next/link";
 
 const StyledTableContainer = styled(TableContainer)`
-  min-width: 47vw;
+   min-width: 40vw;
   overflow-x: auto;
+  margin-bottom: 1rem;
 
   @media (min-width: 768px) {
     max-width: 20vw; 
+    min-height: 20vh;
+    padding-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 90vw;
+    min-height: 15vh; /* Adjust this height as needed */
   }
 `;
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -85,13 +95,16 @@ const Details = () => {
   return (
     <div className="min-h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
       <div className="h-[100vh] gap-4 flex flex-col justify-center items-center max-w-4xl mx-auto p-4">
-        <div className="overflow-y-scroll z-10 max-h-[80vh]">
+      <h1 className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300  text-center font-sans font-bold">
+        Track My Bus
+      </h1>
+        <div className="no-scrollbar mb-32 md:mb-20 overflow-y-scroll z-10 max-h-[80vh] my-9 border-2 border-neutral-500">
           {data.map((trip) => (
             <div key={trip.trip}>
-                <div className="flex flex-col items-center gap-1">
-              <div className="mt-2 flex flex-col justify-center items-center text-white max-w-[80vh] min-w-32 mb-4">
-                <h2>Trip No: {trip.trip}</h2>
-                <h4>Bus Number: {value}</h4>
+                <div className="flex flex-col items-center ">
+              <div className="mt-2 flex flex-col justify-center items-center text-white max-w-[80vh] min-w-32 min-h[10vh] md:min-h[80vh] mb-4 md:mb-10 no-scrollbar">
+                <h2 className="text-2xl uppercase text-bold">Trip No: {trip.trip}</h2>
+                <h4 className="text-sm">Bus Number: {value}</h4>
               </div>
 
               <Paper>
@@ -128,7 +141,19 @@ const Details = () => {
             </div>
           ))}
         </div>
+
       </div>
+      <Link href="https://dsc.gg/upzare" className="flex flex-row items-center justify-center">
+      <div className="z-10 text-bold flex items-center md:opacity-25 text-slate-400 absolute sm:bottom-3 bottom-20 opacity-75 hover:opacity-100 cursor-pointer ">
+  <Image 
+    width={40}
+    height={40}
+    src="/upzare.svg" 
+    alt="Upzare Logo"
+  />
+  <span>Powered By Upzare</span>
+</div>
+</Link>
     </div>
   );
 };
