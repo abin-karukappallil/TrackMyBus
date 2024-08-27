@@ -11,8 +11,8 @@ export default function Home() {
     }
   }
   return (
-    <div className="h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
-    <div className="flex flex-col justify-center items-center max-w-2xl mx-auto p-4">
+    <div className="h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased overflow-hidden">
+    <div className="flex flex-col justify-center items-center max-w-2xl mx-auto p-4  overflow-hidden">
       <h1 className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300  text-center font-sans font-bold">
         Track My Bus
       </h1>
