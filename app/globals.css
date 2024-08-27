@@ -58,7 +58,10 @@
     --chart-5: 340 75% 55%;
   }
 }
-
+.MuiTableContainer-root {
+  max-width: 100%;
+  overflow-x: auto;
+}
 @layer base {
   * {
     @apply border-border;
