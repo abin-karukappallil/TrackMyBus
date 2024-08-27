@@ -1,11 +1,14 @@
 "use client"
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const [value,setvalue] = useState<string>('');
   const router = useRouter();
   const handleChnage = ()=>{
-    router.push('/details');
+    if (value) {
+        router.push(`/details?value=${encodeURIComponent(value)}`);
+    }
   }
   return (
     <div className="h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
@@ -17,7 +20,7 @@ export default function Home() {
       <p className="text-neutral-400 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
       TrackMyBus is designed specifically for bus employees and owners to streamline communication and avoid miscommunication. It provides real-time access to vehicle schedules, trip details, and station timings, ensuring everyone involved is on the same page. The app enhances coordination and helps manage operations more efficiently within the fleet
       </p>
-      <input
+      <input  onChange={(e) => setvalue(e.target.value)}
         type="text"
         placeholder="KL38F4711"
         className="text-white text-center rounded-sm border border-slate-600 focus:ring-2 focus:ring-teal-500  w-full relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-500 p-2"
