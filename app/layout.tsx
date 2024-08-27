@@ -17,8 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body>
+       <div className="sticky">
         {children}
    <BackgroundBeams/>
+   </div>
     </body>
   </html>
   );
