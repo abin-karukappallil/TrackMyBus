@@ -10,7 +10,7 @@ const Details = ()=>  {
             const busNumber = router.query.value as string;            if(busNumber){
                 if(busNumber){
                     setvalue(busNumber)
-                   const data = fetchData(busNumber);
+                    fetchData(busNumber);
                 }
             }
         }
@@ -23,16 +23,25 @@ const Details = ()=>  {
         if(!res.ok){
             throw new Error('Fetching failed');
         }
-        return await res.json();
+        const result =  await res.json();
+        setData(result.trip);
         
     }
    
   return (
 
     <div>
-        {data.forEach(trip => {
-            
-        });}
+       {data.map((trip)=>(
+            <div key={trip.trip}>
+                <p>Trip No: {trip.trip}</p>
+                    {trip.station.map((station:any,i:any)=>(
+                        <div key={i} className='bg-yellow-300'>
+                        <p>Station: {station.station}</p>
+                        </div>
+                    ))};
+                <p>arrival</p>
+            </div>
+       ))};
 
     </div>
   )
