@@ -12,8 +12,6 @@ import Paper from "@mui/material/Paper";
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import Hyperspeed from "@/components/ui/hyperspeed";
-
 
 
 const StyledTableContainer = styled(TableContainer)`
@@ -167,7 +165,6 @@ const Details = () => {
   <span>Powered By Upzare</span>
 </div>
 </Link>
-<Hyperspeed/>
     </div>
   );
 };

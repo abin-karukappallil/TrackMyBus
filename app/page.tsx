@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import Link from "next/link";
-import Hyperspeed from "@/components/ui/hyperspeed";
+
 
 export default function Home() {
   const [value,setvalue] = useState<string>('');
@@ -42,7 +42,7 @@ export default function Home() {
   <span>Powered By Upzare</span>
 </div>
 </Link>
- <Hyperspeed/>
+
     </div>
     
   );
