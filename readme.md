@@ -37,7 +37,7 @@ To build the project for production:
 npm run build
 ```
 You can then deploy the contents of the dist/ directory to your hosting service.
-
+ 
 ## Usage 
 1. Enter the vehicle number in the input field and click Go.
 2. The app fetches data from the API and displays it, including the bus number, trip details, and station schedules.
