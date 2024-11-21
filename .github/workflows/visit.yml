@@ -1,0 +1,71 @@
+name: Visitor Tracking Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      visitor_ip:
+        description: 'IP Address of the Visitor'
+        required: true
+        default: '127.0.0.1'
+      user_agent:
+        description: 'User-Agent String of the Visitor'
+        required: true
+        default: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+
+jobs:
+  log-visitor:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Increment visitor count and log details
+      run: |
+        node -e "
+        const fs = require('fs');
+        const path = require('path');
+
+        const visitorIP = '${{ inputs.visitor_ip }}';
+        const userAgent = '${{ inputs.user_agent }}';
+
+        const log = \`IP: \${visitorIP}, Browser: \${userAgent}\\n\`;
+
+        const filePath = path.join(process.cwd(), 'details.txt');
+
+        if (!fs.existsSync(filePath)) {
+          fs.writeFileSync(filePath, 'Visitor Count: 0\\n\\n', 'utf8');
+        }
+
+        const fileData = fs.readFileSync(filePath, 'utf8');
+        const lines = fileData.split('\\n');
+
+        const countLineIndex = lines.findIndex(line => line.startsWith('Visitor Count:'));
+        let count = parseInt(lines[countLineIndex].replace('Visitor Count: ', ''), 10);
+        count += 1;
+
+        lines[countLineIndex] = \`Visitor Count: \${count}\`;
+        const updatedContent = \`\${lines.join('\\n')}\${log}\`;
+
+        fs.writeFileSync(filePath, updatedContent, 'utf8');
+        console.log(\`Visitor count updated to \${count}\`);
+        console.log(\`Logged visitor IP: \${visitorIP} and User-Agent: \${userAgent}\`);
+        "
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'GitHub Actions Bot'
+        git config --global user.email 'actions@github.com'
+        git add details.txt
+        git commit -m "Updated visitor log with new entry"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
