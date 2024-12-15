@@ -12,6 +12,7 @@ import Paper from "@mui/material/Paper";
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import {Spinner} from "@nextui-org/react";
 
 
 const StyledTableContainer = styled(TableContainer)`
@@ -66,7 +67,7 @@ const Details = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [value, setValue] = useState<string>("");
   const [data, setData] = useState<Trip[]>([]);
-
+  const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     const url = new URL(window.location.href);
     const busNumber = url.searchParams.get("value");
@@ -75,7 +76,7 @@ const Details = () => {
       setValue(busNumber);
       fetchData(busNumber);
     }
-  }, [router]);
+  }, []);
 
   const changePage = () => {
     router.push("/");
@@ -87,15 +88,19 @@ const Details = () => {
         `https://busapi.amithv.xyz/api/v1/search?vehicle_number=${busNumber}`
       );
       if (!res.ok) {
-        throw new Error("Fetching failed");
+       // throw new Error("Fetching failed");
+        setError("Bus not found try with old bus number with that permit");
+        return;
       }
       const result: Trip[] = await res.json();
       setData(result);
     } catch (error) {
       console.error("Error fetching data:", error);
+     setError("Bus not found try with old bus number with that permit");
     } finally {
       setLoading(false);
     }
+   
   }
 
   return (
@@ -106,54 +111,63 @@ const Details = () => {
      <IoMdArrowRoundBack onClick={changePage} color="white" size="30" />
   
      </div>
-     <h1 className="relative z-10 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300  text-center font-sans font-bold">
+     <h1 className="relative z-9 text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300  text-center font-sans font-bold">
         Track My Bus
       </h1>
-        <div className="no-scrollbar mb-32 md:mb-20 overflow-y-scroll z-10 max-h-[80vh] my-9 border-2 border-neutral-500">
-          {data.map((trip) => (
-            <div key={trip.trip}>
-                <div className="flex flex-col items-center ">
-              <div className="mt-2 flex flex-col justify-center items-center text-white max-w-[80vh] min-w-32 min-h[10vh] md:min-h[80vh] mb-4 md:mb-10 no-scrollbar">
-                <h2 className="text-2xl uppercase text-bold">Trip No: {trip.trip}</h2>
-                <h4 className="text-sm">Bus Number: {value}</h4>
-              </div>
+      {loading ? (
+  <div className="flex flex-col items-center justify-center mx-auto my-auto text-white">
+    <Spinner color="warning" label="Loading..." size="md" />
+  </div>
+) : error ? (
+  <p className="flex flex-col items-center justify-center mx-auto my-auto text-red-800 text-2xl font-bold">
+    {error}
+  </p>
+) : (
+  <div className="no-scrollbar mb-32 md:mb-20 overflow-y-scroll z-10 max-h-[78vh] my-9 border-2 border-neutral-500">
+    {data.map((trip) => (
+      <div key={trip.trip}>
+        <div className="flex flex-col items-center ">
+          <div className="mt-2 flex flex-col justify-center items-center text-white max-w-[80vh] min-w-32 min-h[10vh] md:min-h[80vh] mb-4 md:mb-10 no-scrollbar">
+            <h2 className="text-2xl uppercase text-bold">Trip No: {trip.trip}</h2>
+            <h4 className="text-sm">Bus Number: {value}</h4>
+          </div>
 
-              <Paper>
-                <StyledTableContainer>
-                  <Table aria-label="customized table">
-                    <TableHead>
-                      <TableRow>
-                        <StyledTableCell>Station</StyledTableCell>
-                        <StyledTableCell align="right">
-                          Arrival Time
-                        </StyledTableCell>
-                        <StyledTableCell align="right">
-                          Departure Time
-                        </StyledTableCell>
-                      </TableRow>
-                    </TableHead>
-                    <TableBody>
-                      {trip.stations.map((station, i) => (
-                        <StyledTableRow key={i}>
-                          <StyledTableCell>{station.station}</StyledTableCell>
-                          <StyledTableCell align="right">
-                            {station.arrivalTime}
-                          </StyledTableCell>
-                          <StyledTableCell align="right">
-                            {station.departureTime}
-                          </StyledTableCell>
-                        </StyledTableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </StyledTableContainer>
-              </Paper>
-              </div>
-            </div>
-          ))}
+          <Paper>
+            <StyledTableContainer>
+              <Table aria-label="customized table">
+                <TableHead>
+                  <TableRow>
+                    <StyledTableCell>Station</StyledTableCell>
+                    <StyledTableCell align="right">
+                      Arrival Time
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      Departure Time
+                    </StyledTableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {trip.stations.map((station, i) => (
+                    <StyledTableRow key={i}>
+                      <StyledTableCell>{station.station}</StyledTableCell>
+                      <StyledTableCell align="right">
+                        {station.arrivalTime}
+                      </StyledTableCell>
+                      <StyledTableCell align="right">
+                        {station.departureTime}
+                      </StyledTableCell>
+                    </StyledTableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </StyledTableContainer>
+          </Paper>
         </div>
-
       </div>
+    ))}
+  </div>
+)}
+</div>
       <Link href="https://dsc.gg/upzare" className="flex flex-row items-center justify-center">
       <div className="z-10 text-bold flex items-center md:opacity-25 text-slate-400 absolute sm:bottom-3 bottom-20 opacity-75 hover:opacity-100 cursor-pointer ">
   <Image 
